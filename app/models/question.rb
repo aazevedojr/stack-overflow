@@ -3,4 +3,6 @@ class Question < ApplicationRecord
   has_many :answers
   has_many :comments, as: :commentable
   has_many :votes, as: :votable
+
+  validates :content, :title, null: false
 end
